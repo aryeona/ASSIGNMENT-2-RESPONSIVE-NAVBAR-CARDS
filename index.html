@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Website</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        html, body {
+            height: 100%; 
+            margin: 0;
+            
+        }
+
+        body {
+            background: url(cinna.jpg)center center/cover;
+            backdrop-filter: blur(2px);
+            text-align: center;
+            background-size: cover; 
+            background-position: center;
+            min-height: 100%;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background:  #ff9cd2;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            position: relative;
+            border-bottom: 4px solid #75284c;
+        }
+        .nav {
+            display: flex;
+            gap: 20px;
+        }
+        .nav a {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            padding: 10px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ff3ebf;
+            background-color: rgba(168, 230, 245, 0.837);
+            border-radius: 4px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            margin: 5px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 70px;
+            
+        }
+        .card {
+            background: #ff87cd;
+            border-radius: 10px;
+            overflow: auto;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(105, 15, 59, 0.937);
+            text-align: justify;
+            color: rgb(255, 88, 199);
+            padding: 20px;
+            margin: 5px;
+            
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border: 2px dashed rgb(255, 193, 244)
+        }
+        .card h3 {
+            margin: 10px 0;
+            font-size: 22px;
+        }
+        .card p {
+            color: #f0c6ff;
+            font-size: 18px;
+            font-weight: bold;
+            margin: 5px;
+            max-height: 300px;
+            overflow: auto;
+        }
+        ::-webkit-scrollbar {
+            width: 5px;
+            background-color: rgb(226, 66, 191);
+        }
+
+
+
+        @media (max-width: 768px) {
+
+            body {
+                background-size: cover; 
+                background-attachment: scroll;
+                height: 100%;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .card {
+                width: 90%;
+            }
+        }
+
+        @media (max-width :551px) {
+            .nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                background: rgba(0, 0, 0, 0.8);
+                padding: 10px;
+                border-radius: 5px;
+                width: 200px;
+            }
+            .nav.active {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav').classList.toggle('active');
+        }
+    </script>
+</head>
+<link rel="icon" type="image/png" href="shark.png">
+<body>
+    <header>
+        <div>Ana</div>
+        <div class="hamburger" onclick="toggleMenu()"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav class="nav">
+            <a href="#">Home</a>
+            <a href="#">About Me</a>
+            <a href="#">Contacts</a>
+            <a href="#">Works</a>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="card">
+            <img src="me.jpg" alt="me">
+            <h3>Me !</h3>
+            <p>I'm Ana, a 19-year-old digital artist and passionate cosplayer, currently pursuing a Bachelor of Science in Information Technology. I love combining my technical skills with my creative vision to create captivating digital artworks that reflect my vibrant imagination and unique perspective. </p>
+        </div>
+        <div class="card">
+            <img src="aaa.jpg" alt="hobby">
+            <h3>Hobbies</h3>
+            <p>Playing online games(valorant), singing, arts(traditional and digital), writing(songs and poems) cosplaying, mangtrashtalk, mambully, maging toxic, etc. Jack of all trades master of none</p>
+        </div>
+        <div class="card">
+            <img src="bf.jpg" alt="bf">
+            <h3>My C̶r̶u̶s̶h̶  BF ^_^ </h3>
+            <p>Jun Jun Xiao Long Bao Ryan Torres Romero; The love of my life, Mi Hoosban, Mi Reason to live, My Ni Hao, My Everything. 
+                I love him with all my heart and soul.
+                In this world full of doubt,
+                He's the only one i'm sure about,
+                It's the only thing I'm certain of, and it's him. </p>
+        </div>
+    </div> 
+</body>
+</html>
